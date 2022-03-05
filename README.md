@@ -34,5 +34,13 @@ I ran several T-tests in this section, one for each lot. The results were the fo
 
 As we can see the only lot that does not rejects our null hypothesis is the third one. On the first and second lot there is a statistical difference between the samples and the population, due to their very little p-values. Knowing this we can say lot 3 is the most accurate representation of the population.
 
+## Deliverable 4: Study Design: MechaCar vs Competition.
 
+The mtcars dataset was used and compared with the mpg to the MechaCar. A simple t-test will be done from the MechaCar dataset and the mean of the population will be the mean of the mtcars mpg. The null hypothesis is that there is no statistical difference between the population of this two sets.
+
+Now the T-test is performed:
+
+![tteststudydesign](https://user-images.githubusercontent.com/90527315/156903009-914699a7-8507-4146-aef5-309986987616.PNG)
+
+The p-value of the test are lower than 0.05 then, so the null hypothesis can be rejected. Given this the MechaCar have a more effcient mpg than the mtcars population.
 
