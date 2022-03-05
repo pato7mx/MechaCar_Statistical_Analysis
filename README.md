@@ -23,4 +23,16 @@ Summary by production lots:
 
 Wer can pbserve that Lot number 3 has a variance that exceeds the 100 limit, given this, it should be throughly checked and corrected before it continues to operate.
 
+## Deliverable 3: T-Tests on Suspension Coils
+I ran several T-tests in this section, one for each lot. The results were the following:
+
+![lot1 ttest](https://user-images.githubusercontent.com/90527315/156902841-fd5afa6c-a1a2-4656-9eaf-cdbbcc5cddba.PNG)
+
+![lot2 ttest](https://user-images.githubusercontent.com/90527315/156902847-aa6d77eb-b55a-48c1-a731-72002a309cd8.PNG)
+
+![lot3 ttest](https://user-images.githubusercontent.com/90527315/156902875-5e4a186c-0a5a-4fd4-9e48-0ea77a8a7e3d.PNG)
+
+As we can see the only lot that does not rejects our null hypothesis is the third one. On the first and second lot there is a statistical difference between the samples and the population, due to their very little p-values. Knowing this we can say lot 3 is the most accurate representation of the population.
+
+
 
