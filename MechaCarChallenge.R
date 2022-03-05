@@ -26,3 +26,35 @@ PSI_summary <- suspension_coil %>% summarize(Mean=mean(PSI),Median = median(PSI)
 
 # Create a lot summary
 lot_summary <- suspension_coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median = median(PSI),Variance = var(PSI),SD = sd(PSI),.groups = 'keep')
+
+#Deliverable 3: T-Tests on Suspension Coils
+
+# Sample from suspension coil
+suspension_coil_sample <- sample(suspension_coil$PSI,20)
+
+# t test 
+t.test(x = suspension_coil_sample,mu = PSI_summary$Mean)
+
+# PSI Values per lot
+suspension_coil_lot1_PSI <- subset(suspension_coil,Manufacturing_Lot == "Lot1", PSI)
+suspension_coil_lot2_PSI <- subset(suspension_coil,Manufacturing_Lot == "Lot2", PSI)
+suspension_coil_lot3_PSI <- subset(suspension_coil,Manufacturing_Lot == "Lot3", PSI)
+
+# Perform a t test to each lot
+t.test(x = suspension_coil_lot1_PSI, mu = PSI_summary$Mean)
+t.test(x = suspension_coil_lot2_PSI, mu = PSI_summary$Mean)
+t.test(x = suspension_coil_lot3_PSI, mu = PSI_summary$Mean)
+
+#Design a Study Comparing the MechaCar to the Competition
+
+# Perform Shapiro test on the mtcars mpg values
+shapiro.test(mtcars$mpg)
+
+
+library(ggplot2)
+
+# Graph the density plot for the mtcars mpg
+ggplot(mtcars,aes(x=mpg))+geom_density()
+
+# Perform simple T-test 
+t.test(x=mecha_car_mpg$mpg,mu=mean(mtcars$mpg))
